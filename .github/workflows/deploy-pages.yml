@@ -1,0 +1,62 @@
+name: Deploy GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy static site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Validate static site
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -f site/index.html
+          test -f site/assets/styles.css
+          test -f site/assets/app.js
+          test -f site/assets/minijam-logo.svg
+          test -f site/genesis/index.html
+
+          if grep -R --line-number --fixed-strings 'href="/genesis"' site; then
+            echo 'Absolute /genesis path is not valid for a GitHub Project Pages site.' >&2
+            exit 1
+          fi
+
+          if grep -R --line-number -E '<script[^>]+src="https?://' site; then
+            echo 'Unexpected external JavaScript dependency.' >&2
+            exit 1
+          fi
+
+          echo 'Static site validation passed.'
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
