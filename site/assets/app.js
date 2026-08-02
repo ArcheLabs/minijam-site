@@ -487,12 +487,22 @@
   /* ---------- Init ---------- */
 
   function init() {
+    const stageEls = [...document.querySelectorAll('.stage')];
+    function revealInitiallyVisibleStages() {
+      const viewportH = innerHeight || document.documentElement.clientHeight;
+      stageEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const visible = Math.min(rect.bottom, viewportH) - Math.max(rect.top, 0);
+        if (visible > Math.min(rect.height * .35, viewportH * .32)) el.classList.add('visible');
+      });
+    }
+
     const io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: .42 });
-    document.querySelectorAll('.stage').forEach(el => io.observe(el));
+    stageEls.forEach(el => io.observe(el));
 
     addEventListener('resize', resizeCanvas, { passive: true });
     addEventListener('scroll', updateScrollState, { passive: true });
@@ -504,6 +514,7 @@
 
     resizeCanvas();
     updateScrollState();
+    requestAnimationFrame(revealInitiallyVisibleStages);
     if (!reduced) {
       spawnRunner({ curve: 2, start: -.04, direction: 1, duration: 1120, energy: 1, tone: 0 });
     }
