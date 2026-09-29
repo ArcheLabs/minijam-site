@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" fill="none">
+  <style>
+    @media (prefers-reduced-motion: reduce) { .orbit-highlight { display: none; } }
+  </style>
+  <defs>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(326 206) rotate(48) scale(230)"><stop stop-color="#18334A"/><stop offset=".45" stop-color="#09151F"/><stop offset="1" stop-color="#03070B"/></radialGradient>
+    <linearGradient id="ringA" x1="95" y1="300" x2="620" y2="190" gradientUnits="userSpaceOnUse"><stop stop-color="#13BDF5" stop-opacity=".03"/><stop offset=".35" stop-color="#54D4FF" stop-opacity=".55"/><stop offset=".64" stop-color="#826FD6" stop-opacity=".28"/><stop offset="1" stop-color="#F15B70" stop-opacity=".4"/></linearGradient>
+    <linearGradient id="ringB" x1="155" y1="170" x2="585" y2="330" gradientUnits="userSpaceOnUse"><stop stop-color="#13BDF5" stop-opacity=".35"/><stop offset=".48" stop-color="#13BDF5" stop-opacity=".07"/><stop offset="1" stop-color="#F15B70" stop-opacity=".28"/></linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="8" result="blur"/><feBlend in="SourceGraphic" in2="blur"/></filter>
+    <path id="outer-orbit" d="M649.6 211.1A294 95-11 1 1 72.4 322.9A294 95-11 1 1 649.6 211.1"/>
+    <path id="inner-orbit" d="M579.2 317.3A229 67 15 1 1 136.8 198.7A229 67 15 1 1 579.2 317.3"/>
+  </defs>
+  <path d="M45 369C192 288 276 393 430 310C523 260 590 268 688 222" stroke="#41CFFF" stroke-opacity=".055"/>
+  <path d="M31 404C174 329 302 420 451 349C551 302 609 301 702 275" stroke="#F45C71" stroke-opacity=".045"/>
+  <ellipse cx="361" cy="267" rx="294" ry="95" transform="rotate(-11 361 267)" stroke="url(#ringA)" stroke-width="1.3"/>
+  <ellipse cx="358" cy="258" rx="229" ry="67" transform="rotate(15 358 258)" stroke="url(#ringB)"/>
+  <ellipse cx="359" cy="260" rx="169" ry="169" stroke="#6FD9FF" stroke-opacity=".065"/>
+  <circle cx="360" cy="260" r="128" fill="url(#core)" stroke="#4BD3FF" stroke-opacity=".18"/>
+  <circle cx="360" cy="260" r="108" stroke="#fff" stroke-opacity=".045"/>
+  <circle cx="360" cy="260" r="89" stroke="#4BD3FF" stroke-opacity=".055"/>
+  <circle class="orbit-highlight" r="4" fill="#30CAFA" filter="url(#glow)"><animateMotion dur="64s" repeatCount="indefinite"><mpath href="#outer-orbit"/></animateMotion></circle>
+  <circle class="orbit-highlight" r="3.2" fill="#F15F74"><animateMotion dur="64s" begin="-32s" repeatCount="indefinite"><mpath href="#outer-orbit"/></animateMotion></circle>
+  <circle class="orbit-highlight" r="2.7" fill="#72DEFF" opacity=".9"><animateMotion dur="42s" repeatCount="indefinite"><mpath href="#inner-orbit"/></animateMotion></circle>
+  <circle class="orbit-highlight" r="2.2" fill="#EB6578" opacity=".85"><animateMotion dur="42s" begin="-21s" repeatCount="indefinite"><mpath href="#inner-orbit"/></animateMotion></circle>
+  <circle cx="114" cy="164" r="1.3" fill="#8BDEFF" opacity=".55"/><circle cx="606" cy="385" r="1.2" fill="#F28A98" opacity=".55"/>
+</svg>

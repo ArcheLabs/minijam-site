@@ -488,6 +488,16 @@
 
   function init() {
     const stageEls = [...document.querySelectorAll('.stage')];
+    const resourcesSection = document.querySelector('.resources');
+    if (resourcesSection) {
+      const lineObserver = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          resourcesSection.classList.add('line-visible');
+          lineObserver.disconnect();
+        }
+      }, { threshold: .01 });
+      lineObserver.observe(resourcesSection);
+    }
     function revealInitiallyVisibleStages() {
       const viewportH = innerHeight || document.documentElement.clientHeight;
       stageEls.forEach(el => {

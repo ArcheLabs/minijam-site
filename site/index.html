@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>MiniJAM</title>
-  <meta name="description" content="MiniJAM — a minimal JAM-compatible network built for earlier experimentation and execution." />
+  <title>MiniJAM — Public Resource Network</title>
+  <meta name="description" content="MiniJAM is a public resource network. Bring the Internet back to its users." />
   <meta name="theme-color" content="#050505" />
-  <meta property="og:title" content="MiniJAM" />
-  <meta property="og:description" content="JAM running on a parachain." />
+  <meta property="og:title" content="MiniJAM — Public Resource Network" />
+  <meta property="og:description" content="Bring the Internet Back to Its Users." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="./favicon.ico" sizes="any" />
   <link rel="stylesheet" href="./assets/styles.css" />
@@ -17,30 +17,16 @@
 <body>
   <header class="nav" aria-label="Primary">
     <a class="brand-lockup" href="#hero" aria-label="MiniJAM home"><img src="./assets/minijam-logo.svg" alt="MiniJAM" width="1088" height="289"></a>
-    <nav class="nav-right" aria-label="Section">
-      <a href="#roadmap">Roadmap</a>
-      <a href="./genesis/">Genesis</a>
-      <div class="nav-dropdown">
-        <span class="nav-dropdown-trigger" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Testnet</span>
-        <div class="nav-dropdown-menu">
-          <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-stage0.minijam.xyz#/explorer" target="_blank" rel="noopener">Explorer</a>
-          <a href="https://playground.minijam.xyz/" target="_blank" rel="noopener">Playground</a>
-        </div>
-      </div>
-      <a class="nav-social" href="https://github.com/ArcheLabs/minijam-client" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-      </a>
-      <a class="nav-social" href="https://docs.minijam.xyz/" target="_blank" rel="noopener" aria-label="Docs">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
-      </a>
-      <a class="nav-social" href="https://x.com/archelabs_org" target="_blank" rel="noopener" aria-label="X">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-      </a>
+    <nav class="nav-right" aria-label="Main menu">
+      <a href="#mini"><svg class="nav-mini-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M10 10 4.2 5.4M10 10l5.8-4.6M10 10l-5.8 4.6M10 10l5.8 4.6"/><circle cx="10" cy="10" r="2.1"/><circle cx="4" cy="5.2" r="1.4"/><circle cx="16" cy="5.2" r="1.4"/><circle cx="4" cy="14.8" r="1.4"/><circle cx="16" cy="14.8" r="1.4"/></svg><span>MINI</span></a>
+      <a href="https://docs.minijam.xyz/" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20M8 7h6M8 11h8"/></svg><span>Docs</span></a>
+      <a href="https://github.com/ArcheLabs/minijam-client" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M9 19c-4.4 1.5-4.4-2.5-6.2-3m12.4 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.2-.4-3.8 1.4a13 13 0 0 0-7 0C5.6 1.2 4.4 1.6 4.4 1.6a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 3 8.8c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg><span>GitHub</span></a>
+      <a class="nav-x-link" href="https://x.com/archelabs_org" target="_blank" rel="noopener" aria-label="X"><svg class="nav-x-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="hero" aria-label="MiniJAM interactive motion field">
+    <section class="hero" id="hero" aria-label="Public Resource Network">
       <div class="hero-sticky" id="heroSticky">
         <canvas id="motionField" aria-hidden="true"></canvas>
 
@@ -52,62 +38,87 @@
         <div class="hero-vignette"></div>
         <div class="axis-morph" aria-hidden="true"></div>
         <div class="hero-heading">
-          <h1 class="hero-title">Build for <span class="hero-title-accent">JAM</span>.</h1>
-          <p class="hero-sub">A Journey Back to the Future.</p>
+          <h1 class="hero-title">Public Resource<br><span>Network</span></h1>
+          <p class="hero-sub">Bring the Internet Back to Its Users.</p>
         </div>
         <div class="hero-cta-wrap">
-          <a class="hero-cta" href="https://genesis.minijam.xyz/" aria-label="Enter the MINI Genesis Pool">
-            <span class="hero-cta-label">Enter Genesis Pool</span>
-            <span class="hero-cta-arrow" aria-hidden="true">→</span>
-          </a>
+          <div class="hero-cta-group">
+            <a class="hero-cta" href="#resources"><span class="hero-cta-label">Explore MiniJAM</span><span class="hero-cta-arrow" aria-hidden="true">→</span></a>
+            <a class="hero-cta hero-cta-secondary" href="https://docs.minijam.xyz/" target="_blank" rel="noopener"><span class="hero-cta-label">Start Building</span><span class="hero-cta-arrow" aria-hidden="true">→</span></a>
+          </div>
         </div>
         <div class="hero-status"><b>MiniJAM field</b><span>Move · Click · Scroll</span></div>
       </div>
     </section>
 
-    <section class="roadmap" id="roadmap" aria-label="MiniJAM roadmap">
-      <div class="roadmap-inner">
-        <article class="stage">
-          <div class="stage-index">01</div>
-          <div class="stage-copy">
-            <h2 class="stage-title">Look Back</h2>
-            <div class="stage-list">
-              <div class="stage-item">Stage 0 Testnet</div>
-              <div class="stage-item">MINI Genesis</div>
-            </div>
-          </div>
-        </article>
+    <section class="content resources" id="resources" aria-labelledby="resources-title">
+      <div class="section-inner">
+        <header class="section-heading resources-heading">
+          <h2 class="section-title" id="resources-title">Make Creating Easier.</h2>
+        </header>
+        <div class="resource-grid">
+          <article class="resource resource-compute">
+            <div class="resource-graphic" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><path class="stroke-blue" d="M40 6 67 21v31L40 68 13 52V21L40 6Z" stroke-width="1.4"/><path class="stroke-blue" d="M13 21 40 37l27-16M40 37v31" stroke-width="1.2" opacity=".65"/></svg></div>
+            <strong>Compute</strong><small>Execution</small>
+          </article>
+          <article class="resource resource-state">
+            <div class="resource-graphic" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><ellipse class="stroke-violet" cx="40" cy="17" rx="25" ry="9" stroke-width="1.4"/><path class="stroke-violet" d="M15 17v16c0 5 11 9 25 9s25-4 25-9V17M15 33v16c0 5 11 9 25 9s25-4 25-9V33M15 49v14c0 5 11 9 25 9s25-4 25-9V49" stroke-width="1.4"/></svg></div>
+            <strong>State</strong><small>Persistence</small>
+          </article>
+          <article class="resource resource-intelligence">
+            <div class="resource-graphic" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><path class="stroke-red" d="M40 8 54 16v16l14 8v16L54 64l-14 8-14-8-14-8V40l14-8V16L40 8Z" stroke-width="1.3"/><path class="stroke-red" d="m26 32 14 8 14-8M26 64V48l14-8 14 8v16M40 40v32" stroke-width="1.1" opacity=".7"/></svg></div>
+            <strong>Intelligence</strong><small>Learning</small>
+          </article>
+          <article class="resource resource-more">
+            <div class="resource-graphic" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><path class="stroke-red" d="m15 28 25-13 25 13-25 13-25-13Zm0 13 25 13 25-13M15 54l25 13 25-13" stroke-width="1.3"/></svg></div>
+            <strong>More</strong><small>Public Resources</small>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <article class="stage">
-          <div class="stage-index">02</div>
-          <div class="stage-copy">
-            <h2 class="stage-title">Stand Tall</h2>
-            <div class="stage-list">
-              <div class="stage-item">Public Testnet</div>
-              <div class="stage-item">MINI Liquidity Bootstrapping</div>
-            </div>
-          </div>
-        </article>
+    <section class="content ecosystem" id="ecosystem" aria-labelledby="ecosystem-title">
+      <div class="section-inner">
+        <header class="section-heading"><h2 class="section-title" id="ecosystem-title">Ecosystem</h2></header>
+        <div class="ecosystem-grid">
+          <article class="ecosystem-card ecosystem-jam">
+            <span class="ecosystem-tag">LANGUAGE / TOOLCHAIN</span>
+            <div class="ecosystem-icon jam-icon" aria-hidden="true"><svg viewBox="0 0 54 54" fill="none"><path d="m19 12-12 15 12 15M35 12l12 15-12 15M31 7l-8 40"/><path d="M14 27h26" class="icon-accent"/></svg></div>
+            <h3>JamScript</h3><p>Build for JAM.</p><span class="ecosystem-line" aria-hidden="true"></span>
+          </article>
+          <article class="ecosystem-card ecosystem-locus">
+            <span class="ecosystem-tag">ASSET LAYER</span>
+            <div class="ecosystem-icon locus-icon" aria-hidden="true"><svg viewBox="0 0 54 54" fill="none"><circle cx="27" cy="27" r="19"/><circle cx="27" cy="27" r="11"/><circle cx="27" cy="27" r="3" class="icon-accent"/><path d="M8 27h8M38 27h8M27 8v8M27 38v8"/></svg></div>
+            <h3>Locus</h3><p>Assets on JAM.</p><span class="ecosystem-line" aria-hidden="true"></span>
+          </article>
+          <article class="ecosystem-card ecosystem-cells">
+            <span class="ecosystem-tag">AI / LEARNING</span>
+            <div class="ecosystem-icon cells-icon" aria-hidden="true"><svg viewBox="0 0 54 54" fill="none"><path d="m27 5 18 10.5v23L27 49 9 38.5v-23L27 5Z"/><path d="m9 15.5 18 10 18-10M27 25.5V49M18 10.2l18 10.1v21.3"/><circle cx="27" cy="26" r="3.5" class="icon-accent"/></svg></div>
+            <h3>MiniCells</h3><p>Intelligence that keeps learning.</p><span class="ecosystem-line" aria-hidden="true"></span>
+          </article>
+        </div>
+        <div class="ecosystem-links" aria-label="Network links">
+          <a class="ecosystem-link" href="https://docs.minijam.xyz/" target="_blank" rel="noopener"><strong>Docs</strong><span>Guides &amp; references</span></a>
+          <a class="ecosystem-link ecosystem-link-red" href="https://github.com/ArcheLabs/minijam-client" target="_blank" rel="noopener"><strong>GitHub</strong><span>Open source</span></a>
+        </div>
+      </div>
+    </section>
 
-        <article class="stage">
-          <div class="stage-index">03</div>
-          <div class="stage-copy">
-            <h2 class="stage-title">Charge</h2>
-            <div class="stage-list">
-              <div class="stage-item">Incentive Market</div>
-            </div>
+    <section class="content mini" id="mini" aria-labelledby="mini-title">
+      <div class="section-inner mini-grid">
+        <div class="mini-copy">
+          <p class="mini-kicker">NETWORK ECONOMY</p>
+          <h2 class="mini-title" id="mini-title">$MINI</h2>
+          <p class="mini-description">The network economy of MiniJAM.</p>
+          <div class="mini-actions">
+            <a class="mini-link mini-link-primary" href="https://docs.minijam.xyz/" target="_blank" rel="noopener">Tokenomics <span aria-hidden="true">→</span></a>
+            <a class="mini-link" href="./genesis/">Genesis II <span aria-hidden="true">→</span></a>
           </div>
-        </article>
-
-        <article class="stage">
-          <div class="stage-index">04</div>
-          <div class="stage-copy">
-            <h2 class="stage-title">At Ease</h2>
-            <div class="stage-list">
-              <div class="stage-item">MiniJAM Mainnet</div>
-            </div>
-          </div>
-        </article>
+        </div>
+        <div class="mini-visual">
+          <img class="mini-network" src="./assets/mini-network.svg" alt="Abstract MiniJAM network field with blue and red orbital nodes" width="720" height="520" loading="lazy">
+          <img class="mini-mark-overlay" src="./assets/minijam-mark.svg" alt="MiniJAM logo" width="245" height="240" loading="lazy">
+        </div>
       </div>
     </section>
   </main>
