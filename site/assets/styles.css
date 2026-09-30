@@ -507,6 +507,9 @@ body::before {
 }
 
 .hero-cta {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -608,6 +611,48 @@ body::before {
   color: #fff;
   border-color: rgba(0,159,232,.58);
 }
+
+.hero-cta-disabled {
+  cursor: not-allowed;
+  opacity: .56;
+}
+
+.hero-cta-disabled:hover,
+.hero-cta-disabled:focus-visible {
+  transform: none;
+  border-color: rgba(0,159,232,.46);
+  background:
+    linear-gradient(110deg, rgba(0,159,232,.16), rgba(89,97,102,.12) 56%, rgba(214,21,24,.055)),
+    rgba(6,9,11,.62);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.11),
+    inset 0 -16px 38px rgba(0,0,0,.20),
+    0 16px 46px rgba(0,0,0,.30);
+}
+
+.hero-cta-disabled:hover::before,
+.hero-cta-disabled:focus-visible::before { transform: translateX(-125%); }
+.hero-cta-disabled:hover .hero-cta-arrow,
+.hero-cta-disabled:focus-visible .hero-cta-arrow { transform: none; color: var(--brand-blue); border-color: rgba(255,255,255,.18); }
+
+.coming-soon-toast {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  padding: 8px 12px;
+  border: 1px solid rgba(0,159,232,.24);
+  background: rgba(6,9,11,.84);
+  color: rgba(248,251,252,.78);
+  font: 600 11px/1 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 24px rgba(0,0,0,.24);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.coming-soon-toast[hidden] { display: none; }
 
 /* ---------- Scroll axis morph ---------- */
 

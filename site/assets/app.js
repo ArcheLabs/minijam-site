@@ -35,6 +35,16 @@
   const resourcesSection = document.querySelector('.resources');
   let resourcesInView = false;
   let resourceLineStarted = false;
+  const exploreButton = document.querySelector('[data-coming-soon]');
+  const comingSoonToast = document.querySelector('.coming-soon-toast');
+  let comingSoonTimer;
+
+  exploreButton?.addEventListener('click', () => {
+    if (!comingSoonToast) return;
+    comingSoonToast.hidden = false;
+    clearTimeout(comingSoonTimer);
+    comingSoonTimer = setTimeout(() => { comingSoonToast.hidden = true; }, 1800);
+  });
 
   function revealResourceLineAfterField() {
     if (!resourcesSection || !resourcesInView || state.heroProgress < .999 || resourceLineStarted) return;
