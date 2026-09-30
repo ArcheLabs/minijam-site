@@ -32,6 +32,16 @@
     pulses: []
   };
 
+  const resourcesSection = document.querySelector('.resources');
+  let resourcesInView = false;
+  let resourceLineStarted = false;
+
+  function revealResourceLineAfterField() {
+    if (!resourcesSection || !resourcesInView || state.heroProgress < .999 || resourceLineStarted) return;
+    resourceLineStarted = true;
+    setTimeout(() => resourcesSection.classList.add('line-visible'), 180);
+  }
+
   const mouse = {
     x: state.w * .5, y: state.h * .5,
     tx: state.w * .5, ty: state.h * .5,
@@ -421,6 +431,7 @@
     const max = Math.max(1, hero.offsetHeight - innerHeight);
     state.heroProgress = Math.max(0, Math.min(1, scrollY / max));
     root.style.setProperty('--hero-progress', state.heroProgress.toFixed(4));
+    revealResourceLineAfterField();
   }
 
   function pointerMove(e) {
@@ -488,11 +499,11 @@
 
   function init() {
     const stageEls = [...document.querySelectorAll('.stage')];
-    const resourcesSection = document.querySelector('.resources');
     if (resourcesSection) {
       const lineObserver = new IntersectionObserver(entries => {
         if (entries.some(entry => entry.isIntersecting)) {
-          resourcesSection.classList.add('line-visible');
+          resourcesInView = true;
+          revealResourceLineAfterField();
           lineObserver.disconnect();
         }
       }, { threshold: .01 });

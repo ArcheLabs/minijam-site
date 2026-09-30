@@ -1540,7 +1540,7 @@ body.pointer-down .cursor-aura {
 
 .nav-right a.nav-x-link { width: 38px; justify-content: center; padding-inline: 8px; }
 .nav-right a.nav-x-link svg { width: 17px; height: 17px; flex-basis: 17px; }
-.resources { padding-top: clamp(38px, 4.2vw, 60px); }
+.resources { padding-top: clamp(24px, 2.8vw, 40px); }
 .resources .section-heading { margin-bottom: clamp(24px, 2.6vw, 38px); }
 .resources::before {
   opacity: 0;
@@ -1552,12 +1552,17 @@ body.pointer-down .cursor-aura {
   opacity: 1;
   transform: translateX(-50%) scaleX(1);
 }
-.hero { height: 128svh; }
+.hero { height: 115svh; }
+.hero::after { bottom: 0; }
 @media (max-width: 720px) {
-  .hero { height: 128svh; }
-  .resources { padding-top: 40px; }
+  .hero { height: 115svh; }
+  .resources { padding-top: 24px; }
   .resources .section-heading { margin-bottom: 26px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .resources::before { opacity: 1; transform: translateX(-50%); transition: none; }
+  .resources::before { transition-duration: 1.35s !important; }
+  .resource::before, .resource-graphic svg {
+    animation-duration: 5.4s !important;
+    animation-iteration-count: infinite !important;
+  }
 }
