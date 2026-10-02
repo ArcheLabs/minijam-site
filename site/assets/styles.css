@@ -1133,7 +1133,7 @@ body.pointer-down .cursor-aura {
   font-size: clamp(40px, 6.5vw, 82px);
   font-weight: 540;
   letter-spacing: -.06em;
-  line-height: 1;
+  line-height: 1.3;
   background: linear-gradient(180deg, #f4f5f2 25%, rgba(244,245,242,.48));
   -webkit-background-clip: text;
   background-clip: text;
@@ -1354,7 +1354,7 @@ body.pointer-down .cursor-aura {
   font-size: clamp(52px, 5.6vw, 86px);
   font-weight: 690;
   letter-spacing: -.055em;
-  line-height: .98;
+  line-height: 1.3;
 }
 .resource-grid { gap: 26px; padding-top: 16px; }
 .resource {
