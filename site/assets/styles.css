@@ -1611,3 +1611,10 @@ body.pointer-down .cursor-aura {
     animation-iteration-count: infinite !important;
   }
 }
+
+/* Keep the section heading's full glyph box visible after late typography overrides. */
+.section-title {
+  display: block;
+  line-height: 1.3;
+  overflow: visible;
+}
